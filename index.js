@@ -42,6 +42,7 @@ function solve(a, b) {
   let theLargerNumber = 0;
   if (a > b) {
     theLargerNumber = a;
+    return theLargerNumber;
   } else if (b > a) {
     theLargerNumber = b;
     return theLargerNumber;
