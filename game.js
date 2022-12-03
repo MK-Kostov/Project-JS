@@ -16,10 +16,8 @@ function computerPlay() {
   }
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(computerSelection) {
   computerPlay();
-  playerSelection.toLowerCase();
-  // const prompt = require("prompt-sync")();
   let choice = prompt("What's your choice?");
   choice = choice.toLowerCase();
 
@@ -33,14 +31,14 @@ function playRound(playerSelection, computerSelection) {
     alert("You Lose! Scissors beats Paper");
     return "You Lose! Scissors beats Paper";
   } else if (choice == "rock" && computerSelection == "scissors") {
-    alert("You Lose! Rock beats Scissors");
-    return "You Lose! Rock beats Scissors";
+    alert("You Win! Rock beats Scissors");
+    return "You Win! Rock beats Scissors";
   } else if (choice == "paper" && computerSelection == "rock") {
     alert("You Win! Paper beats Rock");
     return "You Win! Paper beats Rock";
   } else if (choice == "scissors" && computerSelection == "paper") {
-    alert("You Win! Paper beats Rock");
-    return "You Win! Paper beats Rock";
+    alert("You Win! Scissors beats Paper");
+    return "You Win! Scissors beats Paper";
   } else if (choice != "rock" && choice != "paper" && choice != "scissors") {
     alert("Incorrect choice");
     return "Incorrect choice";
@@ -58,8 +56,8 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
   for (let i = 0; i < 5; i++) {
-    const playerSelection = "rock";
     const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(computerSelection));
   }
 }
+
