@@ -41,7 +41,7 @@ function playRound(computerSelection) {
     return "You Win! Scissors beats Paper";
   } else if (choice != "rock" && choice != "paper" && choice != "scissors") {
     alert("Incorrect choice");
-    return "Incorrect choice";
+    return i--;
   } else if (choice == "rock" && computerSelection == "rock") {
     alert("Draw");
     return "Draw";
@@ -57,7 +57,7 @@ function playRound(computerSelection) {
 function game() {
   for (let i = 0; i < 5; i++) {
     const computerSelection = computerPlay();
-    console.log(playRound(computerSelection));
+    
   }
 }
 
