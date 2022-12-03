@@ -57,6 +57,7 @@ function playRound(computerSelection) {
 function game() {
   for (let i = 0; i < 5; i++) {
     const computerSelection = computerPlay();
+    playRound(computerSelection);
     
   }
 }
